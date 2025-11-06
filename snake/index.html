@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        
+        <div class="game-container">
+            <div class="header">
+                <h1>Snake Game</h1>
+                <div class="score-container">
+                    Score: <span id="score">0</span>
+                </div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <p class="controls-info">Use Arrow Keys or W/A/S/D to move. Press 'P' to pause.</p>
+        </div>
+
+        <div id="settings-sidebar" class="settings-panel">
+            <h2>Settings</h2>
+            
+            <fieldset>
+                <legend>Difficulty</legend>
+                <label><input type="radio" name="difficulty" value="200" id="diff-easy"> Easy</label>
+                <label><input type="radio" name="difficulty" value="150" id="diff-medium"> Medium</label>
+                <label><input type="radio" name="difficulty" value="100" id="diff-hard"> Hard</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Game Toggles</legend>
+                <label><input type="checkbox" id="toggle-walls"> Walls are solid</label>
+                <label><input type="checkbox" id="toggle-zen"> Zen Mode (No Game Over)</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Colors</legend>
+                <label>Head: <input type="color" id="color-head"></label>
+                <label>Tail: <input type="color" id="color-tail"></label>
+                <label>Food: <input type="color" id="color-food"></label>
+                <label>BG: <input type="color" id="color-bg"></label>
+            </fieldset>
+
+            <div class="settings-buttons">
+                <button id="settings-save">Save & Restart</button>
+            </div>
+        </div>
+
+    </div> <script src="script.js"></script>
+</body>
+</html>

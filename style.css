@@ -1,14 +1,20 @@
-/* Basic page styling */   
+/* ======== NEW CENTERING STYLES ======== */
+html, body {
+    height: 100%; /* Make sure the page can fill the full screen height */
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+    display: flex;         /* Use Flexbox */
+    align-items: center;   /* Vertically center the menu */
+    justify-content: center; /* Horizontally center the menu */
+    min-height: 100vh;     /* Make sure it's at least the full screen height */
 }
+/* ======== END CENTERING STYLES ======== */
+
 
 /* The main menu box */
 .menu-container {
@@ -17,6 +23,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
+    width: 90%; /* Good for mobile */
+    max-width: 500px; /* Max width on big screens */
 }
 
 h1 {
@@ -30,6 +38,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 20px;
 }
 
 /* Styling for each game "button" */
@@ -55,4 +64,5 @@ h1 {
     background-color: #ccc;
     color: #777;
     pointer-events: none; /* Makes it unclickable */
+    cursor: not-allowed;
 }
